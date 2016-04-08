@@ -1,26 +1,26 @@
-*::-webkit-scrollbar
+.desktop *::-webkit-scrollbar
 {
     width: 6px;
     height: 6px;
 }
 
-*::-webkit-scrollbar-track
+.desktop *::-webkit-scrollbar-track
 {
     background: rgba(0, 0, 0, 0.1);
 }
 
-*::-webkit-scrollbar-thumb
+.desktop *::-webkit-scrollbar-thumb
 {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 3px;
 }
 
-textarea::-webkit-scrollbar-track
+.desktop textarea::-webkit-scrollbar-track
 {
     background: rgba(255, 255, 255, 0.1);
 }
 
-textarea::-webkit-scrollbar-thumb
+.desktop textarea::-webkit-scrollbar-thumb
 {
     background: rgba(0, 0, 0, 0.2);
 }
