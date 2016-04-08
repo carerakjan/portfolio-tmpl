@@ -20,29 +20,31 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
             <nav class="mdl-navigation">
-                <a id="main" class="mdl-navigation__link" href="javascript:void(0);">MAIN</a>
-                <a class="mdl-navigation__link" id="navPortfolio" href="javascript:void(0);">PORTFOLIO</a>
-                <a class="mdl-navigation__link" href="javascript:void(0);">CONTACTS</a>
+                <a class="mdl-navigation__link" data-href="home" href="javascript:void(0);">HOME</a>
+                <a class="mdl-navigation__link" data-href="portfolio" href="#portfolio">PORTFOLIO</a>
+                <a class="mdl-navigation__link" data-href="contact" href="#contact">CONTACT</a>
             </nav>
         </div>
         <div class="mdl-layout__header-row mdl-layout__header-row--text">
-            <div class="mdl-layout__header-row--large">Hi, I'm Nick</div>
+            <div class="mdl-layout__header-row--large">Hi, I'm Ann</div>
             <div class="mdl-layout__header-row--medium">Photographer</div>
             <div class="">
-                <button id="goDown" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--brown">
+                <button data-href="portfolio" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--brown">
                     <i class="material-icons">collections</i>
                 </button>
             </div>
         </div>
     </header>
+
     <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Title</span>
+        <!--<span class="mdl-layout-title">Title</span>-->
         <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" href="javascript:void(0);">Main</a>
-            <a class="mdl-navigation__link" id=sideNavPortfolio" href="javascript:void(0);">Portfolio</a>
-            <a class="mdl-navigation__link" href="javascript:void(0);">Contacts</a>
+            <a class="mdl-navigation__link" data-href="home" href="javascript:void(0);">Home</a>
+            <a class="mdl-navigation__link" data-href="portfolio" href="#portfolio">Portfolio</a>
+            <a class="mdl-navigation__link" data-href="contact" href="#contact">Contacts</a>
         </nav>
     </div>
+
     <main class="mdl-layout__content">
         <div class="mdl-grid" id="portfolio"
             style="padding: 56px 0;     max-width: 1024px;">
@@ -86,7 +88,7 @@
                             <div class="demo-card-image mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__actions">
-                                    <span class="demo-card-image__filename">Image.jpg</span>
+
                                 </div>
                             </div>
                         </div>
@@ -95,7 +97,7 @@
                             <div class="demo-card-image mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__actions">
-                                    <span class="demo-card-image__filename">Image.jpg</span>
+
                                 </div>
                             </div>
                         </div>
@@ -104,7 +106,7 @@
                             <div class="demo-card-image mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__actions">
-                                    <span class="demo-card-image__filename">Image.jpg</span>
+
                                 </div>
                             </div>
                         </div>
@@ -113,7 +115,7 @@
                             <div class="demo-card-image mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__actions">
-                                    <span class="demo-card-image__filename">Image.jpg</span>
+
                                 </div>
                             </div>
                         </div>
@@ -122,7 +124,7 @@
                             <div class="demo-card-image mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__actions">
-                                    <span class="demo-card-image__filename">Image.jpg</span>
+
                                 </div>
                             </div>
                         </div>
@@ -131,7 +133,7 @@
                             <div class="demo-card-image mdl-card mdl-shadow--2dp">
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__actions">
-                                    <span class="demo-card-image__filename">Image.jpg</span>
+
                                 </div>
                             </div>
                         </div>
@@ -176,8 +178,8 @@
 
         </div>
 
-        <div class="mdl-grid" id="contacts"
-             style="padding: 56px 8px; background:#363842">
+        <div class="mdl-grid" id="contact"
+             style="padding: 56px 0; background:#363842">
 
             <style>
                 .mdl-textfield__input {
@@ -188,6 +190,18 @@
             <div class="mdl-cell mdl-cell--12-col">
                 <div class="mdl-layout__header-row--large"
                      style="color:#f5f5f5; font-size: 3em; font-weight: 900; height: 56px; text-align: center">Contacts</div>
+
+                <div class="mdl-layout__header-row--medium"
+                     style="
+                            color: #f5f5f5;
+                            font-size: 1.2em;
+                            text-align: center;
+                            line-height: 1.5;
+                            opacity: .7;
+                            padding: 0 20vw;
+                     ">
+                    Feel free to email me to provide some feedback on my photos, give me suggestions for a new job, or to just say hello!
+                </div>
             </div>
 
             <div class="mdl-cell mdl-cell--12-col"
@@ -200,53 +214,57 @@
                     style="width: 70%;">
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
                         style="width: 100%">
-                        <i class="material-icons mdl-textfield--icon">perm_identity</i>
                         <input class="mdl-textfield__input"
                                style="font-size: 20px"
                                type="text"  id="sample2">
-                        <label class="mdl-textfield__label" for="sample2">Name</label>
+                        <label class="mdl-textfield__label" for="sample2">
+                            <i class="material-icons">perm_identity</i>Name</label>
                         <span class="mdl-textfield__error">Input is not a number!</span>
                     </div>
 
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
                          style="width: 100%">
-                        <i class="material-icons mdl-textfield--icon">email</i>
                         <input class="mdl-textfield__input"
                                style="font-size: 20px"
                                type="text"  id="sample2">
-                        <label class="mdl-textfield__label" for="sample2">Email Address</label>
-                        <span class="mdl-textfield__error">Input is not a number!</span>
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
-                         style="width: 100%">
-                        <i class="material-icons mdl-textfield--icon">phone</i>
-                        <input class="mdl-textfield__input"
-                               style="font-size: 20px"
-                               type="text"  id="sample2">
-                        <label class="mdl-textfield__label" for="sample2">Phone Number</label>
+                        <label class="mdl-textfield__label" for="sample2">
+                            <i class="material-icons">email</i> Email Address</label>
                         <span class="mdl-textfield__error">Input is not a number!</span>
                     </div>
 
-
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
                          style="width: 100%">
-                        <i class="material-icons mdl-textfield--icon">message</i>
                         <textarea rows="4" class="mdl-textfield__input"
                                   style="font-size: 20px; resize: none;"
                                   type="text" id="sample2"></textarea>
-                        <label class="mdl-textfield__label" for="sample2">Message</label>
+                        <label class="mdl-textfield__label" for="sample2">
+                            <i class="material-icons">message</i>Message</label>
                         <span class="mdl-textfield__error">Input is not a number!</span>
                     </div>
 
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                        style="padding: 0px 49px; left: 50%; margin-left: -78px;">
-                        Send
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent"
+                        style="
+                                padding: 0px 50px;
+                                left: 50%;
+                                margin-left: -90px;
+                                margin-top: 20px;
+                                border: 1px solid #545766;
+                                color: #fff;
+                                background: transparent;
+                                width: 180px;
+                                height: 50px;
+                                text-transform: uppercase;
+                                font-size: 16px;
+                            ">
+                        Submit
                     </button>
                 </form>
             </div>
 
         </div>
     </main>
+
+
 </div>
 
 <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
@@ -277,7 +295,7 @@
             return parseInt(el.css('min-height'), 10);
         }
 
-        $('#goDown, #navPortfolio').click(function() {
+        $('[data-href=portfolio], [data-href=contact]').click(function() {
             if($('header').height() === getMinHeight($('header'))) return;
 
             $('header').animate({height: 0}, 1000, function() {
@@ -286,7 +304,7 @@
             });
         });
 
-        $('#main').click(function() {
+        $('[data-href=home]').click(function() {
             if($('header').height() > getMinHeight($('header'))) return;
             $('header')
                 .css({background:''})

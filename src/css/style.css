@@ -1,3 +1,30 @@
+*::-webkit-scrollbar
+{
+    width: 6px;
+    height: 6px;
+}
+
+*::-webkit-scrollbar-track
+{
+    background: rgba(0, 0, 0, 0.1);
+}
+
+*::-webkit-scrollbar-thumb
+{
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
+
+textarea::-webkit-scrollbar-track
+{
+    background: rgba(255, 255, 255, 0.1);
+}
+
+textarea::-webkit-scrollbar-thumb
+{
+    background: rgba(0, 0, 0, 0.2);
+}
+
 .demo-layout-transparent {
     background: url('../images/intro-13-1400x941.jpg') center / cover;
 }
@@ -63,6 +90,19 @@
 .mdl-textfield__label {
     color: #545766;
     font-size: 20px;
+    display: flex;
+}
+
+.mdl-textfield--floating-label.is-dirty .mdl-textfield__label .material-icons,
+.mdl-textfield--floating-label.is-focused .mdl-textfield__label .material-icons {
+    font-size: 12px;
+    padding-right: 4px;
+    padding-top: 4px;
+}
+
+.mdl-textfield__label .material-icons {
+    font-size: 20px;
+    padding-right: 10px;
 }
 
 .mdl-textfield__label:after {
@@ -74,4 +114,8 @@
     font-size: 34px;
     position: absolute;
     color: #f5f5f5;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
+    background: #393B2E;
 }
