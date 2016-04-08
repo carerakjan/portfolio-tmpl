@@ -25,6 +25,19 @@
     background: rgba(0, 0, 0, 0.2);
 }
 
+.tablet .mdl-layout__drawer-button,
+.desktop .mdl-layout__drawer-button {
+    display: none;
+}
+
+.mobile header nav.mdl-navigation {
+    display: none;
+}
+
+.mdl-layout__header {
+    max-height: 20000px;
+}
+
 .demo-layout-transparent {
     background: url('../images/intro-13-1400x941.jpg') center / cover;
 }
@@ -60,15 +73,35 @@
     width: 100%;
 }
 
+.mobile.landscape .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--text {
+    height: calc(2.6*56px);
+}
+
+.mobile.landscape .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--large {
+    font-size: 2em;
+    height: 36px;
+}
+
 .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--large {
     font-size: 3em;
     font-weight: 900;
     height: 56px;
 }
 
+.mobile.landscape .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--medium {
+    font-size: 1em;
+    height: 36px;
+}
+
 .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--medium {
     font-size: 1.6em;
     height: 56px;
+}
+
+.mobile.landscape .mdl-button--brown {
+    min-width: 36px;
+    width: 36px;
+    height: 36px;
 }
 
 .mdl-button--brown:hover,
