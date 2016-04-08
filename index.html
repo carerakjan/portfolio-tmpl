@@ -48,7 +48,7 @@
             style="padding: 56px 8px">
             <div class="mdl-cell mdl-cell--12-col">
                 <div class="mdl-layout__header-row--large"
-                style="color:#393B2E; font-size: 4em; font-weight: 900; height: 56px; text-align: center">Portfolio</div>
+                style="color:#393B2E; font-size: 3em; font-weight: 900; height: 56px; text-align: center">Portfolio</div>
             </div>
 
             <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
@@ -203,7 +203,7 @@
         </div>
 
         <div class="mdl-grid" id="contacts"
-             style="padding: 56px 8px; background:#393B2E">
+             style="padding: 56px 8px; background:#363842">
 
             <style>
                 .mdl-textfield__input {
@@ -213,39 +213,57 @@
 
             <div class="mdl-cell mdl-cell--12-col">
                 <div class="mdl-layout__header-row--large"
-                     style="color:#f5f5f5; font-size: 4em; font-weight: 900; height: 56px; text-align: center">Contacts</div>
+                     style="color:#f5f5f5; font-size: 3em; font-weight: 900; height: 56px; text-align: center">Contacts</div>
             </div>
 
             <div class="mdl-cell mdl-cell--12-col"
                 style="display: flex; align-items: center; justify-content: center">
                 <form action="#"
                     style="width: 50%;">
-                    <div class="mdl-textfield mdl-js-textfield"
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
                         style="width: 100%">
+                        <i class="material-icons mdl-textfield--icon">perm_identity</i>
                         <input class="mdl-textfield__input"
                                style="font-size: 20px"
                                type="text"  id="sample2">
-                        <label class="mdl-textfield__label" for="sample2">Name...</label>
+                        <label class="mdl-textfield__label" for="sample2">Name</label>
                         <span class="mdl-textfield__error">Input is not a number!</span>
                     </div>
 
-                    <div class="mdl-textfield mdl-js-textfield"
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
                          style="width: 100%">
+                        <i class="material-icons mdl-textfield--icon">email</i>
                         <input class="mdl-textfield__input"
                                style="font-size: 20px"
                                type="text"  id="sample2">
-                        <label class="mdl-textfield__label" for="sample2">Email...</label>
+                        <label class="mdl-textfield__label" for="sample2">Email Address</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+                         style="width: 100%">
+                        <i class="material-icons mdl-textfield--icon">phone</i>
+                        <input class="mdl-textfield__input"
+                               style="font-size: 20px"
+                               type="text"  id="sample2">
+                        <label class="mdl-textfield__label" for="sample2">Phone Number</label>
                         <span class="mdl-textfield__error">Input is not a number!</span>
                     </div>
 
-                    <div class="mdl-textfield mdl-js-textfield"
+
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
                          style="width: 100%">
-                        <textarea class="mdl-textfield__input"
-                                  style="font-size: 20px"
+                        <i class="material-icons mdl-textfield--icon">message</i>
+                        <textarea rows="4" class="mdl-textfield__input"
+                                  style="font-size: 20px; resize: none;"
                                   type="text" id="sample2"></textarea>
-                        <label class="mdl-textfield__label" for="sample2">Message...</label>
+                        <label class="mdl-textfield__label" for="sample2">Message</label>
                         <span class="mdl-textfield__error">Input is not a number!</span>
                     </div>
+
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                        style="padding: 0px 49px; left: 50%; margin-left: -78px;">
+                        Send
+                    </button>
                 </form>
             </div>
 
@@ -276,8 +294,13 @@
     });
 
     $(function() {
+
+        function getMinHeight(el) {
+            return parseInt(el.css('min-height'), 10);
+        }
+
         $('#goDown, #navPortfolio').click(function() {
-            if($('header').height() === 56) return;
+            if($('header').height() === getMinHeight($('header'))) return;
 
             $('header').animate({height: 0}, 1000, function() {
                 $(this).css({background:'#000'});
@@ -286,7 +309,7 @@
         });
 
         $('#main').click(function() {
-            if($('header').height() > 56) return;
+            if($('header').height() > getMinHeight($('header'))) return;
             $('header')
                 .css({background:''})
                 .find('.mdl-layout__header-row--text')
