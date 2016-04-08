@@ -1,0 +1,46 @@
+.demo-layout-transparent {
+    background: url('../images/intro-13-1400x941.jpg') center / cover;
+}
+.demo-layout-transparent .mdl-layout__header {
+    height: 100vh;
+    position: relative;
+    background: rgba(0,0,0,.4);
+    background: radial-gradient(transparent, #000);
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+}
+
+.demo-layout-transparent .mdl-layout__content {
+    background: #f5f5f5;
+}
+
+.demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--text {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    /*background: rgba(0,0,0,.2);*/
+    height: calc(5*56px);
+    width: 100%;
+}
+
+.demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--large {
+    font-size: 4em;
+    font-weight: 900;
+    height: 56px;
+}
+
+.demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--medium {
+    font-size: 1.6em;
+    height: 56px;
+}
+
+.mdl-button--brown {
+    background: #F4A42A;
+    color: #fff;
+}

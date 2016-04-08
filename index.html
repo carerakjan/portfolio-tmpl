@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="src/css/style.css">
+
+</head>
+<body>
+
+<div class="demo-layout-transparent mdl-layout mdl-layout--fixed-header mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+            <!-- Add spacer, to align navigation to the right -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <nav class="mdl-navigation">
+                <a id="main" class="mdl-navigation__link" href="javascript:void(0);">MAIN</a>
+                <a class="mdl-navigation__link" id="navPortfolio" href="javascript:void(0);">PORTFOLIO</a>
+                <a class="mdl-navigation__link" href="javascript:void(0);">CONTACTS</a>
+            </nav>
+        </div>
+        <div class="mdl-layout__header-row mdl-layout__header-row--text">
+            <div class="mdl-layout__header-row--large">Hi, I'm Nick</div>
+            <div class="mdl-layout__header-row--medium">Photographer</div>
+            <div class="">
+                <button id="goDown" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--brown">
+                    <i class="material-icons">collections</i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">Title</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="javascript:void(0);">Main</a>
+            <a class="mdl-navigation__link" id=sideNavPortfolio" href="javascript:void(0);">Portfolio</a>
+            <a class="mdl-navigation__link" href="javascript:void(0);">Contacts</a>
+        </nav>
+    </div>
+    <main class="mdl-layout__content">
+        <div class="mdl-grid" id="portfolio"
+            style="padding: 56px 8px">
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-layout__header-row--large"
+                style="color:#393B2E; font-size: 4em; font-weight: 900; height: 56px; text-align: center">Portfolio</div>
+            </div>
+
+            <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                <div class="mdl-tabs__tab-bar">
+                    <a href="#starks-panel" class="mdl-tabs__tab is-active">All</a>
+                    <a href="#starks-panel" class="mdl-tabs__tab">Children</a>
+                    <a href="#lannisters-panel" class="mdl-tabs__tab">Weddings</a>
+                    <a href="#targaryens-panel" class="mdl-tabs__tab">Nature</a>
+                </div>
+
+                <div class="mdl-tabs__panel is-active" id="starks-panel">
+                    <!-- Image card -->
+                    <style>
+                        .demo-card-image.mdl-card {
+                            width: 100%;
+                            height: 256px;
+                            border-radius: 0;
+                            background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg') center / cover;
+                        }
+                        .demo-card-image > .mdl-card__actions {
+                            height: 52px;
+                            padding: 16px;
+                            background: rgba(0, 0, 0, 0.2);
+                        }
+                        .demo-card-image__filename {
+                            color: #fff;
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+                    </style>
+
+                    <div class="mdl-grid ">
+
+                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="demo-card-image__filename">Image.jpg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="demo-card-image__filename">Image.jpg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="demo-card-image__filename">Image.jpg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="demo-card-image__filename">Image.jpg</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="mdl-grid ">
+
+                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="demo-card-image__filename">Image.jpg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="demo-card-image__filename">Image.jpg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="demo-card-image__filename">Image.jpg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--3-col-desktop">
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__actions">
+                                    <span class="demo-card-image__filename">Image.jpg</span>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <!--<div class="swiper-container">-->
+                        <!--&lt;!&ndash; Additional required wrapper &ndash;&gt;-->
+                        <!--<div class="swiper-wrapper">-->
+                            <!--&lt;!&ndash; Slides &ndash;&gt;-->
+                            <!--<div class="swiper-slide">-->
+                                <!--<div class="demo-card-image mdl-card">-->
+                                    <!--<div class="mdl-card__title mdl-card&#45;&#45;expand"></div>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="swiper-slide">-->
+                                <!--<div class="demo-card-image mdl-card">-->
+                                    <!--<div class="mdl-card__title mdl-card&#45;&#45;expand"></div>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="swiper-slide">-->
+                                <!--<div class="demo-card-image mdl-card">-->
+                                    <!--<div class="mdl-card__title mdl-card&#45;&#45;expand"></div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--&lt;!&ndash; If we need pagination &ndash;&gt;-->
+                        <!--<div class="swiper-pagination"></div>-->
+
+                        <!--&lt;!&ndash; If we need navigation buttons &ndash;&gt;-->
+                        <!--<div class="swiper-button-prev"></div>-->
+                        <!--<div class="swiper-button-next"></div>-->
+
+                        <!--&lt;!&ndash; If we need scrollbar &ndash;&gt;-->
+                        <!--<div class="swiper-scrollbar"></div>-->
+                    <!--</div>-->
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mdl-grid" id="contacts"
+             style="padding: 56px 8px; background:#393B2E">
+
+            <style>
+                .mdl-textfield__input {
+                    color:#f5f5f5;
+                }
+            </style>
+
+            <div class="mdl-cell mdl-cell--12-col">
+                <div class="mdl-layout__header-row--large"
+                     style="color:#f5f5f5; font-size: 4em; font-weight: 900; height: 56px; text-align: center">Contacts</div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--12-col"
+                style="display: flex; align-items: center; justify-content: center">
+                <form action="#"
+                    style="width: 50%;">
+                    <div class="mdl-textfield mdl-js-textfield"
+                        style="width: 100%">
+                        <input class="mdl-textfield__input"
+                               style="font-size: 20px"
+                               type="text"  id="sample2">
+                        <label class="mdl-textfield__label" for="sample2">Name...</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+
+                    <div class="mdl-textfield mdl-js-textfield"
+                         style="width: 100%">
+                        <input class="mdl-textfield__input"
+                               style="font-size: 20px"
+                               type="text"  id="sample2">
+                        <label class="mdl-textfield__label" for="sample2">Email...</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+
+                    <div class="mdl-textfield mdl-js-textfield"
+                         style="width: 100%">
+                        <textarea class="mdl-textfield__input"
+                                  style="font-size: 20px"
+                                  type="text" id="sample2"></textarea>
+                        <label class="mdl-textfield__label" for="sample2">Message...</label>
+                        <span class="mdl-textfield__error">Input is not a number!</span>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+
+        // If we need pagination
+        pagination: '.swiper-pagination',
+
+        // Navigation arrows
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+
+        // And if we need scrollbar
+//        scrollbar: '.swiper-scrollbar'
+    });
+
+    $(function() {
+        $('#goDown, #navPortfolio').click(function() {
+            if($('header').height() === 56) return;
+
+            $('header').animate({height: 0}, 1000, function() {
+                $(this).css({background:'#000'});
+                $('.mdl-layout__header-row--text').css({top:'-1000px'});
+            });
+        });
+
+        $('#main').click(function() {
+            if($('header').height() > 56) return;
+            $('header')
+                .css({background:''})
+                .find('.mdl-layout__header-row--text')
+                .css({top:''});
+
+            $('header').animate({height:'100vh'}, 1000);
+        })
+    });
+
+</script>
+
+</body>
+</html>
