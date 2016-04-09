@@ -25,6 +25,10 @@
     background: rgba(0, 0, 0, 0.2);
 }
 
+.mdl-navigation__link {
+    outline: none;
+}
+
 .desktop .mdl-navigation__link-icon,
 .desktop .mdl-navigation__link-tooltip {
     display: none;
