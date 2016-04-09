@@ -25,12 +25,15 @@
     background: rgba(0, 0, 0, 0.2);
 }
 
-.tablet .mdl-layout__drawer-button,
-.desktop .mdl-layout__drawer-button {
+.desktop .mdl-navigation__link-icon,
+.desktop .mdl-navigation__link-tooltip {
     display: none;
 }
 
-.mobile header nav.mdl-navigation {
+.mobile .mdl-navigation__link-tooltip,
+.tablet .mdl-navigation__link-tooltip,
+.mobile .mdl-navigation__link-text,
+.tablet .mdl-navigation__link-text {
     display: none;
 }
 

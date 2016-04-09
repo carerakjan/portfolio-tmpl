@@ -20,9 +20,20 @@
             <div class="mdl-layout-spacer"></div>
             <!-- Navigation -->
             <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" data-href="home" href="javascript:void(0);">HOME</a>
-                <a class="mdl-navigation__link" data-href="portfolio" href="#portfolio">PORTFOLIO</a>
-                <a class="mdl-navigation__link" data-href="contact" href="#contact">CONTACT</a>
+                <a class="mdl-navigation__link" data-href="home" id="home_lnk" href="#">
+                    <span class="mdl-navigation__link-text">HOME</span>
+                    <i class="mdl-navigation__link-icon material-icons">home</i></a>
+                    <div class="mdl-navigation__link-tooltip mdl-tooltip" for="home_lnk">Home</div>
+                <a class="mdl-navigation__link" data-href="portfolio" id="portfolio_lnk" href="#portfolio">
+                    <span class="mdl-navigation__link-text">PORTFOLIO</span>
+                    <i class="mdl-navigation__link-icon material-icons">camera_alt</i>
+                    <div class="mdl-navigation__link-tooltip mdl-tooltip" for="portfolio_lnk">Portfolio</div>
+                </a>
+                <a class="mdl-navigation__link" data-href="contact" id="contact_lnk" href="#contact">
+                    <span class="mdl-navigation__link-text">CONTACT</span>
+                    <i class="mdl-navigation__link-icon material-icons">mail_outline</i>
+                    <div class="mdl-navigation__link-tooltip mdl-tooltip" for="contact_lnk">Contact</div>
+                </a>
             </nav>
         </div>
         <div class="mdl-layout__header-row mdl-layout__header-row--text">
@@ -36,14 +47,14 @@
         </div>
     </header>
 
-    <div class="mdl-layout__drawer">
-        <!--<span class="mdl-layout-title">Title</span>-->
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" data-href="home" href="javascript:void(0);">Home</a>
-            <a class="mdl-navigation__link" data-href="portfolio" href="#portfolio">Portfolio</a>
-            <a class="mdl-navigation__link" data-href="contact" href="#contact">Contacts</a>
-        </nav>
-    </div>
+    <!--<div class="mdl-layout__drawer">-->
+        <!--&lt;!&ndash;<span class="mdl-layout-title">Title</span>&ndash;&gt;-->
+        <!--<nav class="mdl-navigation">-->
+            <!--<a class="mdl-navigation__link" data-href="home" href="javascript:void(0);">Home</a>-->
+            <!--<a class="mdl-navigation__link" data-href="portfolio" href="#portfolio">Portfolio</a>-->
+            <!--<a class="mdl-navigation__link" data-href="contact" href="#contact">Contacts</a>-->
+        <!--</nav>-->
+    <!--</div>-->
 
     <main class="mdl-layout__content">
         <div class="mdl-grid" id="portfolio"
