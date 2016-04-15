@@ -293,37 +293,20 @@
 <script>
     $(function() {
 
-        function getMinHeight(el) {
-            return parseInt(el.css('min-height'), 10);
-        }
-
         $('[data-href=portfolio], [data-href=contact]').click(function() {
-            if($('header').height() === getMinHeight($('header'))) return;
-
-            $('header').animate({height: 0}, 1000, function() {
-                $(this).css({background:'#000'});
-                $('.mdl-layout__header-row--text').css({top:'-1000px'});
-            });
+            $('header').addClass('mdl-layout__header--hidden');
         });
 
         $('[data-href=home]').click(function() {
-            if($('header').height() > getMinHeight($('header'))) return;
-            $('header')
-                .css({background:''})
-                .find('.mdl-layout__header-row--text')
-                .css({top:''});
+            $('header').removeClass('mdl-layout__header--hidden');
+        });
 
-            $('header').animate({height:'100vh'}, 1000);
-        })
-
-
-        var mySwiper = new Swiper ('.mdl-tabs__swiper-container', {
+        new Swiper ('.mdl-tabs__swiper-container', {
             freeModeMomentum: false,
             slidesPerView: $('html').hasClass('mobile')?'auto' : 1,
             mousewheelControl: true,
             freeMode: true
         });
-
 
     });
 

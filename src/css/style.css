@@ -49,10 +49,21 @@
 }
 .demo-layout-transparent .mdl-layout__header {
     height: 100vh;
+    transition: 1s height, 1s background-color;
     position: relative;
     background: rgba(0,0,0,.4);
     background: radial-gradient(transparent, #000);
 }
+
+.demo-layout-transparent .mdl-layout__header--hidden .mdl-layout__header-row--text{
+    top: -1000px;
+    opacity: 0;
+}
+.demo-layout-transparent .mdl-layout__header--hidden {
+    height: 0;
+    background-color: #000;
+}
+
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button {
     /* This background is dark, so we set text to white. Use 87% black instead if
@@ -74,6 +85,7 @@
     flex-direction: column;
     position: absolute;
     bottom: 0;
+    transition: 1s opacity;
     /*background: rgba(0,0,0,.2);*/
     height: calc(5*56px);
     width: 100%;
