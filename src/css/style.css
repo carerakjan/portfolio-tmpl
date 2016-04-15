@@ -1,7 +1,7 @@
 .desktop *::-webkit-scrollbar
 {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
 }
 
 .desktop *::-webkit-scrollbar-track
@@ -12,7 +12,6 @@
 .desktop *::-webkit-scrollbar-thumb
 {
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
 }
 
 .desktop textarea::-webkit-scrollbar-track
