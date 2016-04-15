@@ -159,3 +159,11 @@
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active:after {
     background: #393B2E;
 }
+
+
+.mdl-tabs__swiper-container .mdl-tabs__tab-bar{
+    border-bottom: none;
+}
+.mdl-tabs__swiper-container {
+    border-bottom: 1px solid #e0e0e0;
+}
