@@ -47,18 +47,12 @@
         </div>
     </header>
 
-    <!--<div class="mdl-layout__drawer">-->
-        <!--&lt;!&ndash;<span class="mdl-layout-title">Title</span>&ndash;&gt;-->
-        <!--<nav class="mdl-navigation">-->
-            <!--<a class="mdl-navigation__link" data-href="home" href="javascript:void(0);">Home</a>-->
-            <!--<a class="mdl-navigation__link" data-href="portfolio" href="#portfolio">Portfolio</a>-->
-            <!--<a class="mdl-navigation__link" data-href="contact" href="#contact">Contacts</a>-->
-        <!--</nav>-->
-    <!--</div>-->
-
     <main class="mdl-layout__content">
         <div class="mdl-grid" id="portfolio"
-            style="padding: 56px 0;     max-width: 1024px;">
+            style="
+                padding: 56px 0;
+                max-width: 1024px;
+               ">
             <div class="mdl-cell mdl-cell--12-col">
                 <div class="mdl-layout__header-row--large"
                 style="color:#393B2E; font-size: 3em; font-weight: 900; height: 56px; text-align: center">Portfolio</div>
@@ -78,7 +72,6 @@
                             width: 100%;
                             height: 256px;
                             border-radius: 0;
-                            background: url('https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg') center / cover;
                         }
                         .demo-card-image > .mdl-card__actions {
                             height: 52px;
@@ -90,62 +83,80 @@
                             font-size: 14px;
                             font-weight: 500;
                         }
+
+                        .demo-card-image .mdl-card__menu {
+                            color:#fff;
+                        }
                     </style>
 
                     <div class="mdl-grid "
                     style="padding: 8px 0 0">
 
                         <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand"></div>
-                                <div class="mdl-card__actions">
-
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                style="background: url('http://lorempixel.com/1200/1200/nature/2') center / cover"
+                            >
+                                <div class="mdl-card__menu">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">loupe</i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand"></div>
-                                <div class="mdl-card__actions">
-
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                 style="background: url('http://lorempixel.com/1200/1200/nature/4') center / cover"
+                            >
+                                <div class="mdl-card__menu">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">loupe</i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand"></div>
-                                <div class="mdl-card__actions">
-
-                                </div>
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                 style="background: url('http://lorempixel.com/1200/1200/nature/5') center / cover"
+                            ><div class="mdl-card__menu">
+                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                    <i class="material-icons">loupe</i>
+                                </button>
+                            </div>
                             </div>
                         </div>
 
                         <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand"></div>
-                                <div class="mdl-card__actions">
-
-                                </div>
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                 style="background: url('http://lorempixel.com/1200/1200/nature/6') center / cover"
+                            ><div class="mdl-card__menu">
+                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                    <i class="material-icons">loupe</i>
+                                </button>
+                            </div>
                             </div>
                         </div>
 
                         <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand"></div>
-                                <div class="mdl-card__actions">
-
-                                </div>
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                 style="background: url('http://lorempixel.com/1200/1200/nature/7') center / cover"
+                            ><div class="mdl-card__menu">
+                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                    <i class="material-icons">loupe</i>
+                                </button>
+                            </div>
                             </div>
                         </div>
 
                         <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand"></div>
-                                <div class="mdl-card__actions">
-
-                                </div>
+                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                 style="background: url('http://lorempixel.com/1200/1200/nature/8') center / cover"
+                            ><div class="mdl-card__menu">
+                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                    <i class="material-icons">loupe</i>
+                                </button>
+                            </div>
                             </div>
                         </div>
 
@@ -326,6 +337,25 @@
             $('header').animate({height:'100vh'}, 1000);
         })
     });
+
+</script>
+
+
+<!-- Initialize Swiper -->
+<script>
+    var galleryTop = new Swiper('.gallery-top', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+    });
+//    var galleryThumbs = new Swiper('.gallery-thumbs', {
+//        centeredSlides: true,
+//        slidesPerView: 'auto',
+//        touchRatio: 0.2,
+//        slideToClickedSlide: true
+//    });
+
+//    galleryTop.params.control = galleryThumbs;
+//    galleryThumbs.params.control = galleryTop;
 
 </script>
 
