@@ -167,3 +167,11 @@
 .mdl-tabs__swiper-container {
     border-bottom: 1px solid #e0e0e0;
 }
+
+.mobile.portrait #contact form {
+    width: 90% !important;
+}
+
+.mobile.portrait #contact .mdl-layout__header-row--medium {
+    padding: 0 10vw !important;
+}
