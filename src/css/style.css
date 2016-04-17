@@ -56,7 +56,6 @@
 }
 
 .demo-layout-transparent .mdl-layout__header--hidden .mdl-layout__header-row--text{
-    top: -1000px;
     opacity: 0;
 }
 .demo-layout-transparent .mdl-layout__header--hidden {
@@ -77,6 +76,7 @@
 
 .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row {
     padding: 0 16px 0 16px;
+    z-index: 2;
 }
 
 .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--text {
@@ -86,7 +86,7 @@
     position: absolute;
     bottom: 0;
     transition: 1s opacity;
-    /*background: rgba(0,0,0,.2);*/
+    z-index: 0;
     height: calc(5*56px);
     width: 100%;
 }
