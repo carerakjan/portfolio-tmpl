@@ -58,6 +58,7 @@
 .demo-layout-transparent .mdl-layout__header--hidden .mdl-layout__header-row--text{
     opacity: 0;
 }
+
 .demo-layout-transparent .mdl-layout__header--hidden {
     height: 0;
     background-color: #000;
