@@ -51,7 +51,7 @@
         <div class="mdl-grid" id="portfolio"
             style="
                 padding: 56px 0;
-                max-width: 1024px;
+                /*max-width: 1024px;*/
                ">
             <div class="mdl-cell mdl-cell--12-col">
                 <div class="mdl-layout__header-row--large"
@@ -78,7 +78,7 @@
                     <style>
                         .demo-card-image.mdl-card {
                             width: 100%;
-                            height: 256px;
+                            /*height: 256px;*/
                             border-radius: 0;
                         }
                         .demo-card-image > .mdl-card__actions {
@@ -96,6 +96,17 @@
                             color:#fff;
                         }
 
+                        /*.demo-card-image .mdl-card__menu {*/
+                            /*visibility: hidden;*/
+                            /*opacity: 0;*/
+                            /*transition: visibility 0s, opacity .8s linear;*/
+                        /*}*/
+
+                        /*.demo-card-image:hover .mdl-card__menu {*/
+                            /*visibility: visible;*/
+                            /*opacity: 1;*/
+                        /*}*/
+
                         .demo-card-image .mdl-card__title.mdl-card--expand {
                             background: radial-gradient(transparent, #000);
                             transition: 1s opacity;
@@ -107,11 +118,15 @@
                         }
                     </style>
 
-                    <div class="mdl-grid "
-                    style="padding: 8px 0 0">
+                    <div class="mdl-grid mdl-grid--tails desktop"
+                    style="padding: 8px 8px 0">
 
-                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
+                        <div class="mdl-cell mdl-cell--5-col-tablet mdl-cell--5-col-desktop"
+                            style="
+                                height: 400px;
+                            "
+                        >
+                            <div class="mdl-card--wrapper1"><div class="demo-card-image mdl-card mdl-shadow--2dp"
                                 style="background: url('http://lorempixel.com/1200/1200/nature/2') center / cover"
                             >
                                 <div class="mdl-card__title mdl-card--expand"></div>
@@ -120,12 +135,100 @@
                                         <i class="material-icons">loupe</i>
                                     </button>
                                 </div>
-                            </div>
+                            </div></div>
                         </div>
 
                         <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
-                                 style="background: url('http://lorempixel.com/1200/1200/nature/4') center / cover"
+
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                         style="background: url('http://lorempixel.com/1200/1200/nature/4') center / cover"
+                                    >
+                                        <div class="mdl-card__title mdl-card--expand"></div>
+                                        <div class="mdl-card__menu">
+                                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                <i class="material-icons">loupe</i>
+                                            </button>
+                                        </div>
+                                    </div></div>
+                                </div>
+                            </div>
+
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                         style="background: url('http://lorempixel.com/1200/1200/nature/5') center / cover"
+                                    >
+                                        <div class="mdl-card__title mdl-card--expand"></div>
+                                        <div class="mdl-card__menu">
+                                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                <i class="material-icons">loupe</i>
+                                            </button>
+                                        </div>
+                                    </div></div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--6-col">
+                                    <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                         style="background: url('http://lorempixel.com/1200/1200/nature/6') center / cover"
+                                    >
+                                        <div class="mdl-card__title mdl-card--expand"></div>
+                                        <div class="mdl-card__menu">
+                                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                <i class="material-icons">loupe</i>
+                                            </button>
+                                        </div>
+                                    </div></div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--3-col-tablet mdl-cell--3-col-desktop">
+
+                            <div class="mdl-grid">
+                                <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                     style="background: url('http://lorempixel.com/1200/1200/nature/7') center / cover"
+                                >
+                                    <div class="mdl-card__title mdl-card--expand"></div>
+                                    <div class="mdl-card__menu">
+                                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                            <i class="material-icons">loupe</i>
+                                        </button>
+                                    </div>
+                                </div></div>
+                            </div>
+
+                            <div class="mdl-grid">
+                                <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                     style="background: url('http://lorempixel.com/1200/1200/nature/8') center / cover"
+                                >
+                                    <div class="mdl-card__title mdl-card--expand"></div>
+                                    <div class="mdl-card__menu">
+                                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                            <i class="material-icons">loupe</i>
+                                        </button>
+                                    </div>
+                                </div></div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="mdl-grid mdl-grid--tails tablet"
+                         style="padding: 8px 8px 0">
+
+                        <div class="mdl-cell mdl-cell--4-col-tablet"
+                             style="
+                                height: 400px;
+                            "
+                        >
+                            <div class="mdl-card--wrapper1"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                 style="background: url('http://lorempixel.com/1200/1200/nature/2') center / cover"
                             >
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__menu">
@@ -133,58 +236,188 @@
                                         <i class="material-icons">loupe</i>
                                     </button>
                                 </div>
-                            </div>
+                            </div></div>
                         </div>
 
-                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
-                                 style="background: url('http://lorempixel.com/1200/1200/nature/5') center / cover"
+                        <div class="mdl-cell mdl-cell--4-col-tablet">
+
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--8-col">
+                                    <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                        style="background: url('http://lorempixel.com/1200/1200/nature/4') center / cover"
+                                    >
+                                        <div class="mdl-card__title mdl-card--expand"></div>
+                                        <div class="mdl-card__menu">
+                                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                <i class="material-icons">loupe</i>
+                                            </button>
+                                        </div>
+                                    </div></div>
+                                </div>
+                            </div>
+
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--8-col">
+                                    <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                        style="background: url('http://lorempixel.com/1200/1200/nature/5') center / cover"
+                                    >
+                                        <div class="mdl-card__title mdl-card--expand"></div>
+                                        <div class="mdl-card__menu">
+                                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                <i class="material-icons">loupe</i>
+                                            </button>
+                                        </div>
+                                    </div></div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--3-col-tablet">
+                            <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                style="background: url('http://lorempixel.com/1200/1200/nature/6') center / cover"
                             >
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__menu">
-                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                                    <i class="material-icons">loupe</i>
-                                </button>
-                            </div>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">loupe</i>
+                                    </button>
+                                </div>
+                            </div></div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--3-col-tablet">
+
+
+                                <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                    style="background: url('http://lorempixel.com/1200/1200/nature/7') center / cover"
+                                >
+                                    <div class="mdl-card__title mdl-card--expand"></div>
+                                    <div class="mdl-card__menu">
+                                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                            <i class="material-icons">loupe</i>
+                                        </button>
+                                    </div>
+                                </div></div>
+
+
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--2-col-tablet">
+                            <div class="mdl-grid">
+                                <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                    style="background: url('http://lorempixel.com/1200/1200/nature/8') center / cover"
+                                >
+                                    <div class="mdl-card__title mdl-card--expand"></div>
+                                    <div class="mdl-card__menu">
+                                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                            <i class="material-icons">loupe</i>
+                                        </button>
+                                    </div>
+                                </div></div>
                             </div>
                         </div>
 
-                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
-                                 style="background: url('http://lorempixel.com/1200/1200/nature/6') center / cover"
+                    </div>
+
+                    <div class="mdl-grid mdl-grid--tails mobile"
+                         style="padding: 8px 8px 0">
+
+                        <div class="mdl-cell mdl-cell--4-col-mobile">
+                            <div class="mdl-card--wrapper1"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                 style="background: url('http://lorempixel.com/1200/1200/nature/2') center / cover"
                             >
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__menu">
-                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                                    <i class="material-icons">loupe</i>
-                                </button>
-                            </div>
-                            </div>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">loupe</i>
+                                    </button>
+                                </div>
+                            </div></div>
                         </div>
 
-                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
-                                 style="background: url('http://lorempixel.com/1200/1200/nature/7') center / cover"
-                            >
-                                <div class="mdl-card__title mdl-card--expand"></div>
-                                <div class="mdl-card__menu">
-                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                                    <i class="material-icons">loupe</i>
-                                </button>
+                        <div class="mdl-cell mdl-cell--4-col-mobile">
+
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                        style="background: url('http://lorempixel.com/1200/1200/nature/4') center / cover"
+                                    >
+                                        <div class="mdl-card__title mdl-card--expand"></div>
+                                        <div class="mdl-card__menu">
+                                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                <i class="material-icons">loupe</i>
+                                            </button>
+                                        </div>
+                                    </div></div>
+                                </div>
                             </div>
+
+                            <div class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                        style="background: url('http://lorempixel.com/1200/1200/nature/5') center / cover"
+                                    >
+                                        <div class="mdl-card__title mdl-card--expand"></div>
+                                        <div class="mdl-card__menu">
+                                            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                                <i class="material-icons">loupe</i>
+                                            </button>
+                                        </div>
+                                    </div></div>
+                                </div>
+
+
                             </div>
+
+
                         </div>
 
-                        <div class="mdl-cell mdl-cell--4-col-tablet mdl-cell--4-col-desktop">
-                            <div class="demo-card-image mdl-card mdl-shadow--2dp"
-                                 style="background: url('http://lorempixel.com/1200/1200/nature/8') center / cover"
+                        <div class="mdl-cell mdl-cell--4-col-mobile">
+                            <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                style="background: url('http://lorempixel.com/1200/1200/nature/6') center / cover"
                             >
                                 <div class="mdl-card__title mdl-card--expand"></div>
                                 <div class="mdl-card__menu">
-                                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-                                    <i class="material-icons">loupe</i>
-                                </button>
-                            </div>
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">loupe</i>
+                                    </button>
+                                </div>
+                            </div></div>
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col-mobile">
+
+
+                            <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                style="background: url('http://lorempixel.com/1200/1200/nature/7') center / cover"
+                            >
+                                <div class="mdl-card__title mdl-card--expand"></div>
+                                <div class="mdl-card__menu">
+                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                        <i class="material-icons">loupe</i>
+                                    </button>
+                                </div>
+                            </div></div>
+
+
+                        </div>
+
+                        <div class="mdl-cell mdl-cell--4-col-mobile">
+                            <div class="mdl-grid">
+                                <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                                                                    style="background: url('http://lorempixel.com/1200/1200/nature/8') center / cover"
+                                >
+                                    <div class="mdl-card__title mdl-card--expand"></div>
+                                    <div class="mdl-card__menu">
+                                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                            <i class="material-icons">loupe</i>
+                                        </button>
+                                    </div>
+                                </div></div>
                             </div>
                         </div>
 
