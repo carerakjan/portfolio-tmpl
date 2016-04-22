@@ -1,7 +1,7 @@
 .desktop *::-webkit-scrollbar
 {
-    width: 6px;
-    height: 6px;
+    width: 4px;
+    height: 4px;
 }
 
 .desktop *::-webkit-scrollbar-track
@@ -12,7 +12,6 @@
 .desktop *::-webkit-scrollbar-thumb
 {
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 3px;
 }
 
 .desktop textarea::-webkit-scrollbar-track
@@ -50,10 +49,20 @@
 }
 .demo-layout-transparent .mdl-layout__header {
     height: 100vh;
+    transition: 1s height, 1s background-color;
     position: relative;
     background: rgba(0,0,0,.4);
     background: radial-gradient(transparent, #000);
 }
+
+.demo-layout-transparent .mdl-layout__header--hidden .mdl-layout__header-row--text{
+    opacity: 0;
+}
+.demo-layout-transparent .mdl-layout__header--hidden {
+    height: 0;
+    background-color: #000;
+}
+
 .demo-layout-transparent .mdl-layout__header,
 .demo-layout-transparent .mdl-layout__drawer-button {
     /* This background is dark, so we set text to white. Use 87% black instead if
@@ -67,6 +76,7 @@
 
 .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row {
     padding: 0 16px 0 16px;
+    z-index: 2;
 }
 
 .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--text {
@@ -75,16 +85,17 @@
     flex-direction: column;
     position: absolute;
     bottom: 0;
-    /*background: rgba(0,0,0,.2);*/
+    transition: 1s opacity;
+    z-index: 0;
     height: calc(5*56px);
     width: 100%;
 }
 
-.mobile.landscape .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--text {
+.mobile .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--text {
     height: calc(2.6*56px);
 }
 
-.mobile.landscape .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--large {
+.mobile .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--large {
     font-size: 2em;
     height: 36px;
 }
@@ -95,7 +106,7 @@
     height: 56px;
 }
 
-.mobile.landscape .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--medium {
+.mobile .demo-layout-transparent .mdl-layout__header .mdl-layout__header-row--medium {
     font-size: 1em;
     height: 36px;
 }
@@ -105,7 +116,7 @@
     height: 56px;
 }
 
-.mobile.landscape .mdl-button--brown {
+.mobile .mdl-button--brown {
     min-width: 36px;
     width: 36px;
     height: 36px;
@@ -166,4 +177,12 @@
 }
 .mdl-tabs__swiper-container {
     border-bottom: 1px solid #e0e0e0;
+}
+
+.mobile #contact form {
+    width: 90% !important;
+}
+
+.mobile #contact .mdl-layout__header-row--medium {
+    padding: 0 10vw !important;
 }
