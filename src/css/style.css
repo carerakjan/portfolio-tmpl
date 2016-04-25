@@ -294,6 +294,11 @@
         width: calc(50%);
     }
 
+    .mdl-grid--tails .mdl-cell--7-col,
+    .mdl-grid--tails .mdl-cell--7-col-desktop {
+        width: calc(58.3333333333%);
+    }
+
     .mdl-grid--tails .mdl-cell--12-col,
     .mdl-grid--tails .mdl-cell--12-col-desktop {
         width: calc(100%);
