@@ -110,12 +110,8 @@
                     <div class="mdl-grid mdl-grid--tails desktop"
                     style="padding: 8px 8px 0">
 
-                        <div class="mdl-cell mdl-cell--4-col-desktop"
-                            style="
-                                height: 400px;
-                            "
-                        >
-                            <div class="mdl-card--wrapper1"><div class="demo-card-image mdl-card mdl-shadow--2dp"
+                        <div class="mdl-cell mdl-cell--4-col-desktop">
+                            <div class="mdl-card--wrapper"><div class="demo-card-image mdl-card mdl-shadow--2dp"
                                 style="background-position:center; background-size:cover;"
                             >
                                 <div class="mdl-card__title mdl-card--expand"></div>
@@ -562,6 +558,11 @@
         }
 
         initGallary(shuffle(gallary))();
+
+
+        $('.mdl-cell').each(function(i, el) {
+            $(el).css({height: window.getComputedStyle(el, null).getPropertyValue('height')});
+        })
 
     });
 
