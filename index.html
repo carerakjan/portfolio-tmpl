@@ -177,7 +177,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
-<script src="src/js/tiles.js"></script>
+<script src="src/js/jquery.mdl.tiles.js"></script>
 
 <script>
     $(function() {
@@ -214,17 +214,21 @@
         ];
 
 
-        var tiles = new Tiles({
-            container: $('.mdl-grid.mdl-grid--tails'),
-            desktop:[4,{8:[6,6,5,4,3]}],
-            tablet: [4,{4:[8,8]},3,3,2],
-            mobile: [2,2,2,2,2,2],
-            data: _.shuffle(gallery)
+        $('.mdl-grid.mdl-grid--tails').tiles({
+            tile: {
+                shadowDepths: '2dp',
+                menuButton: {
+                    rippleEffect: true
+                }
+            },
+            scheme: {
+                desktop:[4,{8:[6,6,5,4,3]}],
+                tablet: [4,{4:[8,8]},3,3,2],
+                mobile: [2,2,2,2,2,2]
+            },
+            data: _.shuffle(gallery),
+            resizeListener: true
         });
-
-        tiles.render();
-
-        $(window).on('resize', tiles.render.bind(tiles));
 
     });
 
