@@ -230,7 +230,11 @@
 
         return {
             fetch: function() {
-                return $.Deferred().resolve(gallery);
+                var deferred = $.Deferred();
+                setTimeout(function(){
+                    deferred.resolve(gallery);
+                }, 2000);
+                return deferred.promise();
             }
         }
     });
@@ -249,7 +253,10 @@
                 schemeMobile: '@',
                 resizeListener: '@'
             },
-            template: '<div class="mdl-grid mdl-grid--tails"></div>',
+            template: '<div class="mdl-grid mdl-grid--tails">' +
+            '<div class="mdl-cell mdl-cell--12-col" style="text-align:center">' +
+            '<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active">' +
+            '</div></div></div>',
             link: function($scope, $element, $attrs) {
 
                 gallery.fetch().then(function(images) {
