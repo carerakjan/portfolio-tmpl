@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="mdlPortfolioApp">
 <head>
     <meta name="theme-color" content="#000">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,7 +75,16 @@
                 </div>
 
                 <div class="mdl-tabs__panel is-active" id="starks-panel">
-                    <div class="mdl-grid mdl-grid--tails"></div>
+                    <div data-mdl-tails
+                         data-tile-shadow-depths="2dp"
+                         data-tile-menu-button-icon="fullscreen"
+                         data-tile-menu-button-ripple-effect="true"
+                         data-tile-lightening-effect="true"
+                         data-scheme-desktop="[4,{8:[6,6,5,4,3]}]"
+                         data-scheme-tablet="[4,{4:[8,8]},3,3,2]"
+                         data-scheme-mobile="[2,2,2,2,2,2]"
+                         data-resize-listener="true"
+                    ></div>
                 </div>
             </div>
 
@@ -176,7 +185,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
 <script src="src/js/jquery.mdl.tiles.js"></script>
 
 <script>
@@ -204,35 +213,75 @@
             freeMode: true
         });
 
-        var gallery = [
-            'http://cdn.bigbangfish.com/beautiful/beautiful-children/beautiful-children-9.jpg',
-            'https://lh6.googleusercontent.com/-_QMjOvR6adk/TWig_61-cHI/AAAAAAAAAjM/uW0OnMbDJQY/s1600/beautiful+children+photography_003.jpg',
-            'http://3.bp.blogspot.com/-3B_jqNAsCTk/Uzk6uGGJ1xI/AAAAAAAAb5Q/8qBkm-u0Mi8/s1600/beautiful-children.jpg',
-            'http://wowoon.com/anh/2015/9-12/the-bible-talks-of-the-new-children-on-the-planet-with-new-dna-with-large-beautiful-eyes-and-a-wise-soul-to-address-our-wrong-path-pretty-face-faces-girls-face-beautiful-eyes-beautiful-children-amazin.jpg',
-            'http://www.incrediblesnaps.com/wp-content/uploads/2015/06/Beautiful-Children-Photos-by-Lisa-Holloway-5.jpg',
-            'https://shirleybuxtonphotography.files.wordpress.com/2012/04/untitled-shoot-4525.jpg'
-        ];
-
-
-        $('.mdl-grid.mdl-grid--tails').tiles({
-            tile: {
-                shadowDepths: '2dp',
-                menuButton: {
-                    icon: 'fullscreen',
-                    rippleEffect: true
-                },
-                lighteningEffect: true
-            },
-            scheme: {
-                desktop:[4,{8:[6,6,5,4,3]}],
-                tablet: [4,{4:[8,8]},3,3,2],
-                mobile: [2,2,2,2,2,2]
-            },
-            data: _.shuffle(gallery),
-            resizeListener: true
-        });
-
     });
+
+    var app = angular.module('mdlPortfolioApp', []);
+
+    app.factory('mdlTailsGallery', function() {
+
+        var gallery = [
+           'http://cdn.bigbangfish.com/beautiful/beautiful-children/beautiful-children-9.jpg',
+           'https://lh6.googleusercontent.com/-_QMjOvR6adk/TWig_61-cHI/AAAAAAAAAjM/uW0OnMbDJQY/s1600/beautiful+children+photography_003.jpg',
+           'http://3.bp.blogspot.com/-3B_jqNAsCTk/Uzk6uGGJ1xI/AAAAAAAAb5Q/8qBkm-u0Mi8/s1600/beautiful-children.jpg',
+           'http://wowoon.com/anh/2015/9-12/the-bible-talks-of-the-new-children-on-the-planet-with-new-dna-with-large-beautiful-eyes-and-a-wise-soul-to-address-our-wrong-path-pretty-face-faces-girls-face-beautiful-eyes-beautiful-children-amazin.jpg',
+           'http://www.incrediblesnaps.com/wp-content/uploads/2015/06/Beautiful-Children-Photos-by-Lisa-Holloway-5.jpg',
+           'https://shirleybuxtonphotography.files.wordpress.com/2012/04/untitled-shoot-4525.jpg'
+       ];
+
+        return {
+            fetch: function() {
+                var deferred = $.Deferred();
+                setTimeout(function(){
+                    deferred.resolve(gallery);
+                }, 2000);
+                return deferred.promise();
+            }
+        }
+    });
+
+    app.directive('mdlTails', ['mdlTailsGallery', function(gallery) {
+        return {
+            restrict: 'AE',
+            replace: true,
+            scope: {
+                tileShadowDepths: '@',
+                tileMenuButtonIcon: '@',
+                tileMenuButtonRippleEffect: '@',
+                tileLighteningEffect: '@',
+                schemeDesktop: '@',
+                schemeTablet: '@',
+                schemeMobile: '@',
+                resizeListener: '@'
+            },
+            template: '<div class="mdl-grid mdl-grid--tails">' +
+            '<div class="mdl-cell mdl-cell--12-col" style="text-align:center">' +
+            '<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active">' +
+            '</div></div></div>',
+            link: function($scope, $element, $attrs) {
+
+                gallery.fetch().then(function(images) {
+                    $element.tiles({
+                        tile: {
+                            shadowDepths: $scope.tileShadowDepths,
+                            menuButton: {
+                                icon: $scope.tileMenuButtonIcon,
+                                rippleEffect: $scope.$eval($scope.tileMenuButtonRippleEffect)
+                            },
+                            lighteningEffect: $scope.$eval($scope.tileLighteningEffect)
+                        },
+                        scheme: {
+                            desktop:$scope.$eval($scope.schemeDesktop),
+                            tablet: $scope.$eval($scope.schemeTablet),
+                            mobile: $scope.$eval($scope.schemeMobile)
+                        },
+                        data: _.shuffle(images),
+                        resizeListener: $scope.$eval($scope.resizeListener)
+                    });
+                });
+
+            }
+        }
+    }]);
 
 </script>
 
