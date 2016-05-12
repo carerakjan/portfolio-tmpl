@@ -2,14 +2,11 @@
 
     function Card(options) {
         this.createCardContainer();
-        this.createTitle();
+        this.createTitle(options.lighteningEffect || null);
+        this.createMenu(options.menuButton || {});
 
         if(options.shadowDepths) {
             this.assignShadow(options.shadowDepths);
-        }
-
-        if(options.menuButton) {
-            this.createMenu(options.menuButton);
         }
 
         this.build();
@@ -23,8 +20,9 @@
         this.$element.addClass('mdl-shadow--' + depths);
     };
 
-    Card.prototype.createTitle = function() {
-        this.$title = $('<div>').addClass('mdl-card__title mdl-card--expand');
+    Card.prototype.createTitle = function(lighteningEffect) {
+        this.$title = $('<div>').addClass('mdl-card__title');
+        lighteningEffect && this.$title.addClass(' mdl-card--expand');
     };
 
     Card.prototype.createMenu = function(options) {
